@@ -1,7 +1,8 @@
-import { getIsLoading, getError } from 'Redux/selectors';
-import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { getIsLoading, getError } from '../Redux/selectors';
+//import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from 'Redux/operations';
+import { fetchContacts } from '../Redux/operations';
 import { useDispatch } from 'react-redux';
 import { ContactForm } from './ContactForm';
 import { Filter } from './Filter/index';
