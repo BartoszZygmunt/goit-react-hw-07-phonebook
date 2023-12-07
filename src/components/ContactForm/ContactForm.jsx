@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../Redux/operations';
-import css from './ContactForm.module.css';
+import './ContactForm.css';
 
 const INITIAL_STATE = {
   name: '',
@@ -39,14 +39,15 @@ export const ContactForm = () => {
   }, [contact, dispatch]);
 
   return (
-    <div className={css['form-wrapper']}>
+    <div className="form-wrapper">
+      <div className="label-main">Phone Book - asynchron version</div>
       <form>
-        <div className={css[`label-input`]}>
-          <label className={css.label} htmlFor="name">
+        <div className="label-input">
+          <label className="label" htmlFor="name">
             Name
           </label>
           <input
-            className={css.input}
+            className="input"
             type="text"
             name="name"
             value={contact.name}
@@ -56,12 +57,12 @@ export const ContactForm = () => {
             onChange={handleChange}
           />
         </div>
-        <div className={css[`label-input`]}>
-          <label className={css.label} htmlFor="number">
+        <div className="label-input">
+          <label className="label" htmlFor="number">
             Number
           </label>
           <input
-            className={css.input}
+            className="input"
             type="tel"
             name="number"
             value={contact.number}
@@ -71,7 +72,7 @@ export const ContactForm = () => {
             onChange={handleChange}
           />
         </div>
-        <button className={css.button} type="submit">
+        <button className="button" type="submit">
           Add contact
         </button>
       </form>
